@@ -6,7 +6,8 @@ d = '18910'
 
 def decoder(message: str):
     length = len(message)
-    if message and (message[0] == '0' or message[0] not in "123456789"):
+    # this makes sure that the character we are getting is a number in a range 1 - 9
+    if message and (message[0] not in "123456789"):
         return 0
     
     if length <= 1:
